@@ -1,20 +1,28 @@
-class UserModel {
+// User model for mobile rewards app
+
+class User {
   String id;
   String name;
   String email;
-  List<Reward> rewards;
+  List<String> rewards;
 
-  UserModel({required this.id, required this.name, required this.email, this.rewards = const []});
+  User({required this.id, required this.name, required this.email, this.rewards = const []});
 
-  void addReward(Reward reward) {
-    rewards.add(reward);
+  factory User.fromJson(Map<String, dynamic> json) {
+    return User(
+      id: json['id'],
+      name: json['name'],
+      email: json['email'],
+      rewards: List<String>.from(json['rewards']),
+    );
   }
-}
 
-class Reward {
-  String rewardId;
-  String description;
-  DateTime dateClaimed;
-
-  Reward({required this.rewardId, required this.description, required this.dateClaimed});
+  Map<String, dynamic> toJson() {
+    return {
+      'id': id,
+      'name': name,
+      'email': email,
+      'rewards': rewards,
+    };
+  }
 }
