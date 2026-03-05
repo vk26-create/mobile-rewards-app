@@ -9,15 +9,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Mobile Rewards App',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Mobile Rewards Home'),
+          title: Text('Mobile Rewards'),
         ),
         body: Center(
-          child: Text('Welcome to Mobile Rewards!'),
+          child: Text('Welcome to the Mobile Rewards App!'),
         ),
       ),
     );
