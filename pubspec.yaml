@@ -1,0 +1,29 @@
+name: mobile_rewards_app
+
+description: A Flutter project for a rewards app.
+
+publish_to: 'none' # Remove this line if the package should be published
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=2.12.0 <3.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  provider: ^5.0.0
+  http: ^0.13.3
+  flutter_bloc: ^7.0.0
+  cupertino_icons: ^1.0.2
+  dio: ^4.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/ 
